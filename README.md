@@ -1,4 +1,4 @@
-# Nihongo — Belajar Bahasa Jepang
+# Japanese Nihongo Learning by Azmi Aziz
 
 Aplikasi belajar bahasa Jepang untuk pemula. Materi disusun bertahap dari Hiragana dan Katakana, dilanjutkan 100 kosakata dasar dan pola kalimat.
 
