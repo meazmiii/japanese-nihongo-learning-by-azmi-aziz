@@ -1,0 +1,9 @@
+{
+  "name": "Nihongo - Belajar Bahasa Jepang",
+  "short_name": "Nihongo",
+  "description": "Belajar Kana, 100 kosakata, dan pola kalimat Jepang dengan latihan interaktif",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#f8f6f1",
+  "background_color": "#f8f6f1"
+}
