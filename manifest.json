@@ -4,6 +4,26 @@
   "description": "Belajar Kana, 100 kosakata, dan pola kalimat Jepang dengan latihan interaktif",
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#f8f6f1",
-  "background_color": "#f8f6f1"
+  "theme_color": "#c83d4b",
+  "background_color": "#fcfbf8",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
 }
