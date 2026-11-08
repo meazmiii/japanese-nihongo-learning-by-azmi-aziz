@@ -118,6 +118,94 @@ const kanaWeek = [
   { title: "Hari 7", theme: "Review Hiragana & Katakana", groups: [] },
 ];
 
+const jlptLevels = [
+  {
+    id: "N5", name: "Pemula", description: "Ungkapan dasar, tata bahasa sederhana, dan situasi sehari-hari.",
+    duration: 15, questions: [
+      { section: "文字・語彙", prompt: "「図書館」の読み方はどれですか。", options: ["としょかん", "としょうかん", "としょがん", "とじょかん"], answer: 0 },
+      { section: "文字・語彙", prompt: "「あたらしい」と反対の意味の言葉はどれですか。", options: ["古い", "高い", "大きい", "長い"], answer: 0 },
+      { section: "文字・語彙", prompt: "「魚」はインドネシア語で何ですか。", options: ["Daging", "Ikan", "Sayuran", "Telur"], answer: 1 },
+      { section: "文法", prompt: "わたしは毎朝６時（　）起きます。", options: ["に", "で", "を", "が"], answer: 0 },
+      { section: "文法", prompt: "きのう、スーパーでりんごを（　）。", options: ["買います", "買いました", "買いません", "買って"], answer: 1 },
+      { section: "文法", prompt: "つくえの上に本（　）あります。", options: ["が", "を", "へ", "で"], answer: 0 },
+      { section: "読解", passage: "わたしはマリアです。毎日７時に起きます。８時に朝ごはんを食べて、バスで学校へ行きます。", prompt: "マリアさんは何で学校へ行きますか。", options: ["電車", "バス", "自転車", "歩いて"], answer: 1 },
+      { section: "読解", passage: "あしたは日曜日です。午前はうちで勉強します。午後、友だちと映画を見に行きます。", prompt: "午後、何をしますか。", options: ["家で勉強します", "買い物をします", "映画を見ます", "学校へ行きます"], answer: 2 },
+      { section: "読解", passage: "この店は月曜日から土曜日まで開いています。日曜日は休みです。朝９時から夜８時までです。", prompt: "この店は何曜日に休みですか。", options: ["月曜日", "水曜日", "土曜日", "日曜日"], answer: 3 },
+      { section: "聴解", audio: "店員：いらっしゃいませ。お客さん：コーヒーを一つください。店員：ホットですか、アイスですか。お客さん：アイスをお願いします。", prompt: "お客さんは何を注文しましたか。", options: ["ホットコーヒー", "アイスコーヒー", "お茶", "水"], answer: 1 },
+      { section: "聴解", audio: "男の人：あした、何時に会いますか。女の人：駅に３時に来てください。男の人：わかりました。", prompt: "二人は何時に会いますか。", options: ["２時", "３時", "４時", "５時"], answer: 1 },
+      { section: "聴解", audio: "母：たろう、牛乳を買ってきて。たろう：はい。母：それから、パンもお願いします。", prompt: "たろうさんは何を買いますか。", options: ["牛乳とパン", "牛乳と卵", "パンと水", "水と卵"], answer: 0 },
+    ],
+  },
+  {
+    id: "N4", name: "Dasar", description: "Percakapan rutin, bentuk lampau, alasan, dan teks pendek.",
+    duration: 18, questions: [
+      { section: "文字・語彙", prompt: "「準備」の読み方はどれですか。", options: ["じゅんび", "じゅびん", "しゅんび", "じゅんぴ"], answer: 0 },
+      { section: "文字・語彙", prompt: "会議の時間が（　）ので、急いでください。", options: ["近づいた", "間に合った", "遅れた", "始めた"], answer: 0 },
+      { section: "文字・語彙", prompt: "「予約する」と同じ意味に近いものはどれですか。", options: ["前もって申し込む", "すぐに出発する", "後で連絡する", "予定を変える"], answer: 0 },
+      { section: "文法", prompt: "日本へ行く（　）、日本語を勉強しています。", options: ["ために", "そうに", "ながら", "までに"], answer: 0 },
+      { section: "文法", prompt: "窓が開いて（　）から、閉めてください。", options: ["いる", "ある", "しまう", "おく"], answer: 0 },
+      { section: "文法", prompt: "雨が降りそうですから、傘を持って行った（　）いいですよ。", options: ["ほうが", "ことが", "ものが", "ところが"], answer: 0 },
+      { section: "読解", passage: "来週の土曜日に町の図書館で古本市があります。午前10時から午後４時までで、入場は無料です。売上金は子どもたちの本を買うために使われます。", prompt: "古本市の売上金は何に使われますか。", options: ["図書館の修理", "子どもの本の購入", "会場の予約", "新しい店の開店"], answer: 1 },
+      { section: "読解", passage: "山田さんへ。昨日借りた傘を返しに行きましたが、留守だったので玄関の前に置いておきました。助かりました。ありがとう。田中", prompt: "田中さんは傘をどこに置きましたか。", options: ["山田さんの部屋", "玄関の前", "駅の入口", "郵便受けの中"], answer: 1 },
+      { section: "読解", passage: "図書館からのお知らせ：来週の月曜日は本の整理をするため、午後５時に閉館します。返却ポストはいつも通り利用できます。", prompt: "来週の月曜日、図書館について正しいものはどれですか。", options: ["一日中休みだ", "午後５時に閉まる", "返却ポストが使えない", "本を借りることができる"], answer: 1 },
+      { section: "聴解", audio: "女の人：すみません、駅まで歩いて何分ぐらいですか。男の人：歩くと20分ですが、このバスなら10分で着きますよ。女の人：じゃあ、バスに乗ります。", prompt: "女の人はどうしますか。", options: ["歩きます", "タクシーに乗ります", "バスに乗ります", "電車に乗ります"], answer: 2 },
+      { section: "聴解", audio: "男の人：レポートはもう書きましたか。女の人：はい。でも、先生に出す前にもう一度読んで、間違いを直すつもりです。", prompt: "女の人はこれから何をしますか。", options: ["レポートを書く", "先生に質問する", "レポートを読み直す", "友だちに見せる"], answer: 2 },
+      { section: "聴解", audio: "店員：こちらのシャツは三千円です。二枚買うと五百円安くなります。男の人：では、白と青を一枚ずつください。", prompt: "男の人はいくら払いますか。", options: ["二千五百円", "三千円", "五千円", "五千五百円"], answer: 3 },
+    ],
+  },
+  {
+    id: "N3", name: "Menengah", description: "Memahami informasi utama, hubungan antarkalimat, dan konteks sosial.",
+    duration: 22, questions: [
+      { section: "文字・語彙", prompt: "「影響」の読み方はどれですか。", options: ["えいきょう", "えいぎょう", "いんきょう", "えんきょう"], answer: 0 },
+      { section: "文字・語彙", prompt: "会議の内容を忘れないように、要点をノートに（　）おいた。", options: ["記録して", "確認して", "比較して", "紹介して"], answer: 0 },
+      { section: "文字・語彙", prompt: "この説明は少し（　）で、何をすればいいのか分かりにくい。", options: ["あいまい", "新鮮", "豊か", "正確"], answer: 0 },
+      { section: "文法", prompt: "この薬を飲めば、すぐに熱が下がる（　）。", options: ["とは限らない", "に違いない", "わけがない", "ことになった"], answer: 0 },
+      { section: "文法", prompt: "説明書をよく読んだ（　）、機械の使い方が分からなかった。", options: ["のに", "ので", "ために", "うえで"], answer: 0 },
+      { section: "文法", prompt: "健康のために、毎日歩く（　）にしています。", options: ["こと", "もの", "ところ", "わけ"], answer: 0 },
+      { section: "読解", passage: "市では、駅前の放置自転車を減らすため、来月から駐輪場の利用料金を一日100円から50円に下げる。一方、禁止区域に置かれた自転車は、これまで通り撤去する。市は、利用者に駐輪場の場所を知らせる案内板も設置する予定だ。", prompt: "市が来月から始めることは何ですか。", options: ["駐輪場を閉鎖する", "駐輪場を安く利用できるようにする", "撤去の対象区域を広げる", "駅前に自転車を置けるようにする"], answer: 1 },
+      { section: "読解", passage: "新しい職場に慣れるには時間がかかると思っていたが、同僚が昼休みに話しかけてくれたおかげで、少しずつ安心できるようになった。仕事の手順も、分からないことをそのままにせず質問するようにしている。", prompt: "書き手が安心できるようになったのはなぜですか。", options: ["仕事が簡単だったから", "同僚が話しかけてくれたから", "昼休みが長かったから", "手順を全部覚えていたから"], answer: 1 },
+      { section: "読解", passage: "地域の清掃活動は、以前は参加者が少なかった。そこで今年から、作業の後に地元の店で使える券を配ることにした。参加者は増えたが、主催者は券だけが目的にならないよう、活動の意義も伝えていきたいと話している。", prompt: "主催者がこれから大切にしたいことは何ですか。", options: ["券の金額を上げること", "清掃活動の意味を伝えること", "活動の回数を減らすこと", "地元の店を増やすこと"], answer: 1 },
+      { section: "聴解", audio: "女の人：発表の資料、写真を増やしたほうがいいかな。男の人：写真より、最初に結論を一枚で見せたほうが分かりやすいと思うよ。女の人：なるほど。じゃあ、結論のページを作り直すね。", prompt: "女の人は資料をどう直しますか。", options: ["写真を増やす", "結論のページを直す", "発表時間を短くする", "資料を印刷し直す"], answer: 1 },
+      { section: "聴解", audio: "男の人：予約した新幹線は９時発ですよね。女の人：そうです。でも、駅までのバスが遅れているので、一本後の電車に変更しました。男の人：それなら10時半ですね。", prompt: "二人が乗る新幹線は何時に出ますか。", options: ["９時", "９時半", "10時", "10時半"], answer: 3 },
+      { section: "聴解", audio: "女の人：この仕事、今日中に終わりそう？男の人：予定より時間がかかっているけど、資料の確認を手伝ってもらえれば間に合うと思う。女の人：分かった。午後から確認するね。", prompt: "女の人は何を手伝いますか。", options: ["資料の確認", "予定の変更", "会議の予約", "仕事の説明"], answer: 0 },
+    ],
+  },
+  {
+    id: "N2", name: "Mahir", description: "Teks argumentatif, nuansa ungkapan, dan percakapan dengan maksud tersirat.",
+    duration: 26, questions: [
+      { section: "文字・語彙", prompt: "「著しい」の使い方として最も自然なものはどれですか。", options: ["技術の進歩が著しい。", "著しい道をまっすぐ歩く。", "水を著しく飲んだ。", "机を著しく片づけた。"], answer: 0 },
+      { section: "文字・語彙", prompt: "新しい制度を導入する前に、現場の意見を（　）する必要がある。", options: ["考慮", "遠慮", "予想", "維持"], answer: 0 },
+      { section: "文字・語彙", prompt: "予算が限られているため、計画の一部を（　）せざるを得なかった。", options: ["縮小", "拡大", "解消", "発揮"], answer: 0 },
+      { section: "文法", prompt: "本人の努力（　）、周囲の支えも成功には欠かせない。", options: ["はもちろん", "に限らず", "を問わず", "に応じて"], answer: 0 },
+      { section: "文法", prompt: "この調査結果は、対象者が少ない（　）、そのまま一般化することはできない。", options: ["ことから", "ばかりに", "ものの", "どころか"], answer: 0 },
+      { section: "文法", prompt: "会議では、結論を急ぐ（　）、まず事実関係を整理すべきだ。", options: ["あまり", "より", "までに", "うえで"], answer: 1 },
+      { section: "読解", passage: "在宅勤務は通勤時間を減らし、個人の生活に合わせて働ける点で評価されている。しかし、出勤しないこと自体が生産性を高めるわけではない。仕事の目標や情報共有の方法が曖昧なままでは、かえって確認に時間がかかる。働く場所を選ぶ制度を効果的にするには、成果を測る基準と、相談しやすい仕組みを整えることが欠かせない。", prompt: "筆者が在宅勤務を効果的にするために必要だと述べていることは何か。", options: ["全員が毎日出勤すること", "勤務時間を一律に短くすること", "成果の基準と相談の仕組みを整えること", "通勤時間を仕事にあてること"], answer: 2 },
+      { section: "読解", passage: "ある店では、商品の説明を詳しく書いた札を置いたところ、店員への質問が減ると予想していた。ところが実際には、説明を読んだ客から、より具体的な質問が寄せられるようになった。店長はこれを失敗とは考えていない。客が商品を理解したうえで選ぼうとしている証拠だと受け止め、接客の内容を見直すことにした。", prompt: "店長は説明札を置いた結果をどう考えていますか。", options: ["客の関心が高まったと考えている", "説明が難しすぎたと考えている", "質問が減らず失敗したと考えている", "商品の数を減らすべきだと考えている"], answer: 0 },
+      { section: "読解", passage: "地域の公共交通を維持するため、自治体は利用者数の少ない路線をただちに廃止するのではなく、運行時間や車両の大きさを見直す方針を示した。住民からは利便性への懸念も出ているが、自治体は試験運行の結果を公開し、必要に応じて計画を修正するとしている。", prompt: "自治体の方針として最も適切なものはどれか。", options: ["利用者の少ない路線をすべて廃止する", "試験運行をせず運行を続ける", "運行方法を試し、結果に応じて見直す", "住民の意見を聞かず車両を大型化する"], answer: 2 },
+      { section: "聴解", audio: "男の人：新しい案、部長は賛成してくれた？女の人：方向性はいいと言っていたけど、費用の見積もりをもう少し具体的にしてほしいそうよ。男の人：じゃあ、実施時期より先に予算の根拠をまとめよう。", prompt: "二人はまず何をすることにしましたか。", options: ["実施時期を決める", "予算の根拠をまとめる", "部長に案を説明する", "方向性を変更する"], answer: 1 },
+      { section: "聴解", audio: "女の人：資料、今日中に全員へ送る予定だったんですが、最終確認がまだで。男の人：急いで間違いが残るより、明日の朝一番に送ったほうがいい。会議は午後だから間に合うよ。", prompt: "資料はいつ送ることになりましたか。", options: ["今日の朝", "今日の午後", "明日の朝", "明日の午後"], answer: 2 },
+      { section: "聴解", audio: "男の人：この店、昼はいつも混んでいますね。女の人：ええ。でも、向かいの通りに新しい店ができてから、こちらの列は少し短くなったんですよ。味は変わっていないんですけどね。", prompt: "女の人によると、最近どうなりましたか。", options: ["料理の味が変わった", "店の列が少し短くなった", "営業時間が短くなった", "向かいの店が閉まった"], answer: 1 },
+    ],
+  },
+  {
+    id: "N1", name: "Mahir lanjutan", description: "Nuansa makna, wacana abstrak, serta inferensi dalam konteks formal.",
+    duration: 30, questions: [
+      { section: "文字・語彙", prompt: "「懸念」の使い方として最も適切なものはどれですか。", options: ["計画の遅れが懸念されている。", "彼は懸念な服を着ている。", "懸念を食べて元気になった。", "懸念の道を駅まで歩いた。"], answer: 0 },
+      { section: "文字・語彙", prompt: "彼の説明は、複雑な問題の核心を（　）に捉えていた。", options: ["的確", "過剰", "安易", "強引"], answer: 0 },
+      { section: "文字・語彙", prompt: "予想外の批判を受けたが、彼女は冷静さを（　）ことなく説明を続けた。", options: ["失う", "欠く", "損なう", "逃す"], answer: 0 },
+      { section: "文法", prompt: "彼の研究は、従来の前提を問い直す（　）、新たな議論の出発点となった。", options: ["契機となり", "ものの", "ことなく", "ばかりに"], answer: 0 },
+      { section: "文法", prompt: "制度の見直しは、現場の実態を踏まえて行われる（　）である。", options: ["べき", "まい", "ところ", "のみ"], answer: 0 },
+      { section: "文法", prompt: "問題の全容が明らかにならない（　）、拙速な判断は避けるべきだ。", options: ["ことには", "ものなら", "にしては", "とあれば"], answer: 0 },
+      { section: "読解", passage: "効率化という言葉は、しばしば投入する時間や費用を減らすことと同一視される。だが、短期的な負担の削減が長期的な価値の損失を招くなら、それを効率化と呼ぶのは適切ではない。たとえば、相談の時間を省けば一見作業は速く進むものの、認識のずれが後工程で修正される可能性がある。何を効率とみなすかは、削減した資源だけでなく、その結果として何が実現したかを含めて検討されるべきだ。", prompt: "筆者が述べる「効率化」を評価する際の考え方はどれか。", options: ["作業時間が短くなれば常に効率化といえる", "費用を削減した量を最も重視すべきだ", "削減だけでなく、その結果得られた価値も見るべきだ", "相談の時間はすべて省くべきだ"], answer: 2 },
+      { section: "読解", passage: "専門家の知見を社会に伝える際、正確さを損なわないことは当然重要である。しかし、専門用語を並べるだけでは、受け手が判断に必要な情報を得られるとは限らない。説明を簡潔にすることは、内容を単純化することと同じではない。何が分かっていて何が未確定なのかを区別し、受け手の関心に沿って構成し直すことが、むしろ理解の精度を高める。", prompt: "筆者が伝わる説明に必要だと考えていることは何か。", options: ["専門用語をできるだけ増やすこと", "不確かな情報を説明から除くこと", "受け手に合わせて情報を整理し、確実性も区別すること", "複雑な内容を一つの結論にまとめること"], answer: 2 },
+      { section: "読解", passage: "地域の歴史を記録する事業では、資料の保存だけでなく、それを誰がどのように利用できるかも議論の対象となった。公開範囲を狭めれば個人情報への配慮はしやすくなるが、資料が研究や教育に生かされにくくなる。関係者は一律の公開・非公開を選ぶのではなく、情報の性質と利用目的に応じて扱いを決める仕組みを整えようとしている。", prompt: "関係者が目指している資料の扱い方はどれか。", options: ["すべての資料を無条件で公開する", "すべての資料を長期間非公開にする", "情報と利用目的に応じて公開方法を決める", "研究目的での利用を認めない"], answer: 2 },
+      { section: "聴解", audio: "女の人：この提案、反対されたわけではないんですが、会議では結論が出ませんでした。男の人：資料が足りなかった？女の人：いいえ。費用対効果は説明できました。ただ、導入後に誰が運用を担うのか、その点が曖昧だと言われて。", prompt: "提案について、会議で問題になった点は何ですか。", options: ["費用対効果の根拠", "資料の正確さ", "導入後の運用担当", "提案への反対意見"], answer: 2 },
+      { section: "聴解", audio: "男の人：調査の結果は、当初の仮説を支持していると言えますか。女の人：一部はそうですが、対象が都市部に偏っているので、全体に当てはまるとまでは言えません。追加調査の結果を待ってから結論を出したいです。", prompt: "女の人は調査結果についてどう考えていますか。", options: ["仮説はすでに完全に証明された", "対象に偏りがあり、結論には追加調査が必要だ", "調査方法に問題があり、結果は使えない", "都市部以外の調査は必要ない"], answer: 1 },
+      { section: "聴解", audio: "女の人：報告書の公開は来週に延期したほうがよさそうです。男の人：内容に問題が見つかったんですか。女の人：内容ではなく、図表の出典確認が終わっていません。確認できた部分だけ先に公開する案もありますが、今回は一括で出すことになりました。", prompt: "報告書の公開が延期された理由は何ですか。", options: ["内容に誤りが見つかったから", "図表の出典確認が終わっていないから", "一部のデータが削除されたから", "公開方法が決まっていないから"], answer: 1 },
+    ],
+  },
+];
+
 const storageKey = "nihongo-learning-progress";
 const state = loadProgress();
 let activePage = "home";
@@ -128,6 +216,9 @@ let activeVocabIndex = 0;
 let vocabRevealed = false;
 let showRomaji = true;
 let currentQuiz = null;
+let currentExam = null;
+let selectedExamLevel = "N5";
+let examTimer = 0;
 let toastTimer;
 
 function loadProgress() {
@@ -139,11 +230,16 @@ function loadProgress() {
       vocabularyKnown: Array.isArray(saved.vocabularyKnown) ? saved.vocabularyKnown : [],
       patternsCompleted: Array.isArray(saved.patternsCompleted) ? saved.patternsCompleted : [],
       best: saved.best && typeof saved.best === "object" ? saved.best : {},
+      examHistory: Array.isArray(saved.examHistory)
+        ? saved.examHistory.filter((attempt) => attempt && jlptLevels.some((level) => level.id === attempt.level)
+          && Number.isFinite(attempt.score) && Number.isFinite(attempt.total) && Number.isFinite(attempt.percent)
+          && typeof attempt.date === "string").slice(0, 20)
+        : [],
       quizzes: Number.isFinite(saved.quizzes) ? saved.quizzes : 0,
       streak: Number.isFinite(saved.streak) ? saved.streak : 0,
     };
   } catch {
-    return { completed: [], kanaCompleted: [], vocabularyKnown: [], patternsCompleted: [], best: {}, quizzes: 0, streak: 0 };
+    return { completed: [], kanaCompleted: [], vocabularyKnown: [], patternsCompleted: [], best: {}, examHistory: [], quizzes: 0, streak: 0 };
   }
 }
 
@@ -205,6 +301,7 @@ function renderPage() {
   else if (activePage === "patterns") view.innerHTML = renderPatterns();
   else if (activePage === "kanji") view.innerHTML = renderKanji();
   else if (activePage === "practice") view.innerHTML = renderPractice();
+  else if (activePage === "exams") view.innerHTML = renderExams();
   else if (activePage === "progress") view.innerHTML = renderProgress();
   else view.innerHTML = renderHome();
   bindPageEvents();
@@ -226,6 +323,7 @@ function renderHome() {
         <button class="learning-card practice-card" data-go="patterns"><span class="card-number">3 / KALIMAT</span><span class="learning-symbol">文</span><span class="card-title">Pola kalimat</span><span class="card-copy">Latih pola kalimat dasar.</span><span class="card-bottom"><span>${state.patternsCompleted.length} / ${sentencePatterns.length} pola</span><span class="circle-arrow">↗</span></span></button>
       </div>
     </section>
+    <button class="jlpt-home-card" data-go="exams"><span class="jlpt-home-symbol">試</span><span><strong>Siap uji kemampuanmu?</strong><small>Coba simulasi JLPT dari N5 sampai N1.</small></span><span class="jlpt-home-arrow">Mulai simulasi →</span></button>
   `;
 }
 
@@ -312,6 +410,46 @@ function renderPractice() {
     ${currentQuiz ? renderQuiz() : `<div class="practice-layout"><div class="content-card quiz-setup"><h2>Pilih materi</h2><div class="quiz-choices"><label><input type="radio" name="quiz-type" value="hiragana" checked><span class="choice-symbol">あ</span><span><strong>Hiragana</strong><small>${getCompletedKanaGroups("hiragana").length ? `${getCompletedKanaGroups("hiragana").length} kelompok dipelajari` : "Mulai dari kelompok Vokal"}</small></span><span class="radio-mark"></span></label><label><input type="radio" name="quiz-type" value="katakana"><span class="choice-symbol">ア</span><span><strong>Katakana</strong><small>${getCompletedKanaGroups("katakana").length ? `${getCompletedKanaGroups("katakana").length} kelompok dipelajari` : "Mulai dari kelompok Vokal"}</small></span><span class="radio-mark"></span></label><label><input type="radio" name="quiz-type" value="vocabulary"><span class="choice-symbol">言</span><span><strong>Kotoba</strong><small>Arti 100 kosakata</small></span><span class="radio-mark"></span></label><label><input type="radio" name="quiz-type" value="kanji"><span class="choice-symbol">漢</span><span><strong>Kanji pemula</strong><small>12 karakter</small></span><span class="radio-mark"></span></label></div><button id="start-quiz" class="button button-dark full-button">Mulai kuis <span>→</span></button></div></div>`}`;
 }
 
+function renderExams() {
+  if (currentExam) return renderExamSession();
+
+  const selected = jlptLevels.find((level) => level.id === selectedExamLevel) || jlptLevels[0];
+  const attempts = state.examHistory.filter((attempt) => attempt.level === selected.id);
+  const best = attempts.length ? Math.max(...attempts.map((attempt) => attempt.percent)) : null;
+  const sections = ["文字・語彙", "文法", "読解", "聴解"];
+  return `<div class="page-intro"><span class="eyebrow">JAPANESE LANGUAGE PROFICIENCY TEST</span><h1>Simulasi <em>JLPT.</em></h1><p>Kenali format soal dari level N5 hingga N1. Paket ini adalah mini-simulasi latihan dengan waktu ringkas, bukan ujian resmi atau prediksi skor JLPT.</p></div>
+    <div class="jlpt-level-grid">${jlptLevels.map((level) => {
+      const history = state.examHistory.filter((attempt) => attempt.level === level.id);
+      const levelBest = history.length ? Math.max(...history.map((attempt) => attempt.percent)) : null;
+      return `<button class="jlpt-level-card ${selected.id === level.id ? "selected" : ""}" data-select-exam="${level.id}" aria-pressed="${selected.id === level.id}"><span class="level-badge">${level.id}</span><strong>${level.name}</strong><small>${history.length ? `Terbaik ${levelBest}%` : "Belum dicoba"}</small></button>`;
+    }).join("")}</div>
+    <section class="jlpt-exam-detail"><div><span class="eyebrow">LEVEL DIPILIH</span><h2>${selected.id} · ${selected.name}</h2><p>${selected.description}</p></div><div class="jlpt-exam-meta"><span><strong>${selected.questions.length}</strong> soal</span><span><strong>${sections.length}</strong> bagian</span><span><strong>${selected.duration} menit</strong> waktu simulasi</span></div><div class="jlpt-section-list">${sections.map((section) => `<span>${section}<small>${selected.questions.filter((question) => question.section === section).length} soal</small></span>`).join("")}</div><p class="jlpt-disclaimer">Waktu dibuat lebih singkat dari tes penuh. Audio 聴解 menggunakan suara Jepang dari browser. Hasil hanya untuk latihan; penilaian resmi JLPT memakai skala dan kriteria tersendiri.</p><button class="button button-dark" id="start-exam" data-level="${selected.id}">Mulai simulasi ${selected.id} <span>→</span></button>${best === null ? "" : `<span class="jlpt-best-score">Skor terbaikmu: <strong>${best}%</strong> · ${attempts.length} kali mencoba</span>`}</section>
+    ${state.examHistory.length ? `<section class="jlpt-history"><div class="section-heading"><h2>Riwayat simulasi</h2></div><div class="jlpt-history-list">${state.examHistory.slice(0, 5).map((attempt) => `<div><span class="level-badge">${escapeHtml(attempt.level)}</span><strong>${attempt.percent}%</strong><small>${attempt.score}/${attempt.total} benar · ${escapeHtml(attempt.date)}</small></div>`).join("")}</div></section>` : ""}`;
+}
+
+function renderExamSession() {
+  if (currentExam.finished) {
+    const level = jlptLevels.find((item) => item.id === currentExam.level);
+    const correct = currentExam.answers.filter((answer, index) => answer === level.questions[index].answer).length;
+    const sections = ["文字・語彙", "文法", "読解", "聴解"];
+    return `<section class="content-card exam-result"><span class="result-flower">✳</span><span class="eyebrow">SIMULASI ${level.id} SELESAI</span><h2>Hasil latihanmu</h2><p>Ini adalah skor latihan, bukan penilaian resmi JLPT.</p><div class="result-score">${Math.round(correct / level.questions.length * 100)}<small>%</small></div><span class="result-caption">${correct} dari ${level.questions.length} jawaban benar</span><div class="exam-section-results">${sections.map((section) => {
+      const questions = level.questions.map((question, index) => ({ question, index })).filter(({ question }) => question.section === section);
+      const sectionCorrect = questions.filter(({ question, index }) => currentExam.answers[index] === question.answer).length;
+      return `<div><span>${section}</span><strong>${sectionCorrect} / ${questions.length}</strong></div>`;
+    }).join("")}</div><button class="button button-dark" id="finish-exam">Kembali ke pilihan level</button></section>`;
+  }
+
+  const level = jlptLevels.find((item) => item.id === currentExam.level);
+  const question = level.questions[currentExam.index];
+  const selectedAnswer = currentExam.answers[currentExam.index];
+  const answeredCount = currentExam.answers.filter((answer) => answer !== null).length;
+  const remaining = `${String(Math.floor(currentExam.remaining / 60)).padStart(2, "0")}:${String(currentExam.remaining % 60).padStart(2, "0")}`;
+  return `<div class="exam-session-top"><button class="text-button" id="exit-exam">← Keluar</button><span class="exam-level-label">SIMULASI ${level.id}</span><span class="exam-timer" id="exam-timer" role="timer" aria-label="Sisa waktu">${remaining}</span></div>
+    <div class="exam-session-progress"><span>Soal ${currentExam.index + 1} dari ${level.questions.length}</span><span>${answeredCount} dijawab</span><div class="quiz-track"><i style="width:${(currentExam.index + 1) / level.questions.length * 100}%"></i></div></div>
+    <div class="exam-layout"><section class="content-card exam-question"><span class="exam-section-badge">${question.section}</span>${question.passage ? `<div class="exam-passage">${escapeHtml(question.passage)}</div>` : ""}<p class="exam-prompt">${escapeHtml(question.prompt)}</p>${question.audio ? `<button class="sound-button exam-audio" data-exam-speak="${escapeHtml(question.audio)}">♫ Dengarkan audio Jepang</button>` : ""}<div class="exam-answer-options">${question.options.map((option, index) => `<button class="exam-answer-option ${selectedAnswer === index ? "selected" : ""}" data-exam-answer="${index}" aria-pressed="${selectedAnswer === index}"><span>${String.fromCharCode(65 + index)}</span>${escapeHtml(option)}</button>`).join("")}</div><div class="exam-question-controls"><button class="button button-light" id="previous-exam-question" ${currentExam.index === 0 ? "disabled" : ""}>← Sebelumnya</button><button class="button ${currentExam.index === level.questions.length - 1 ? "button-dark" : "button-light"}" id="${currentExam.index === level.questions.length - 1 ? "submit-exam" : "next-exam-question"}">${currentExam.index === level.questions.length - 1 ? "Kumpulkan ujian" : "Berikutnya →"}</button></div></section>
+    <aside class="content-card exam-question-nav"><strong>Navigasi soal</strong><div>${level.questions.map((_, index) => `<button class="${index === currentExam.index ? "current" : ""} ${currentExam.answers[index] !== null ? "answered" : ""}" data-exam-question="${index}" aria-label="Soal ${index + 1}${currentExam.answers[index] !== null ? ", dijawab" : ", belum dijawab"}" aria-current="${index === currentExam.index ? "step" : "false"}">${index + 1}</button>`).join("")}</div><small>${answeredCount} / ${level.questions.length} sudah dijawab</small><button class="text-button exam-submit-link" id="submit-exam-shortcut">Kumpulkan simulasi</button></aside></div>`;
+}
+
 function renderQuiz() {
   if (currentQuiz.finished) {
     const percent = Math.round(currentQuiz.score / currentQuiz.questions.length * 100);
@@ -387,6 +525,56 @@ function startQuiz(type, groupIndex = "learned") {
   });
   currentQuiz = { type, groupIndex: Number.isInteger(groupIndex) ? groupIndex : null, questions, index: 0, score: 0, answered: false, finished: false };
   setPage("practice");
+}
+
+function startExam(levelId) {
+  const level = jlptLevels.find((item) => item.id === levelId);
+  if (!level) {
+    showToast("Level simulasi tidak ditemukan.");
+    return;
+  }
+  window.clearInterval(examTimer);
+  currentExam = {
+    level: level.id,
+    index: 0,
+    answers: Array(level.questions.length).fill(null),
+    remaining: level.duration * 60,
+    finished: false,
+  };
+  setPage("exams");
+  examTimer = window.setInterval(() => {
+    if (!currentExam || currentExam.finished) {
+      window.clearInterval(examTimer);
+      return;
+    }
+    currentExam.remaining -= 1;
+    const timer = document.getElementById("exam-timer");
+    if (timer) {
+      timer.textContent = `${String(Math.floor(currentExam.remaining / 60)).padStart(2, "0")}:${String(currentExam.remaining % 60).padStart(2, "0")}`;
+      if (currentExam.remaining <= 60) timer.classList.add("urgent");
+    }
+    if (currentExam.remaining <= 0) finishExam();
+  }, 1000);
+}
+
+function finishExam() {
+  if (!currentExam || currentExam.finished) return;
+  window.clearInterval(examTimer);
+  const level = jlptLevels.find((item) => item.id === currentExam.level);
+  const score = currentExam.answers.reduce((total, answer, index) => (
+    total + (answer === level.questions[index].answer ? 1 : 0)
+  ), 0);
+  const attempt = {
+    level: level.id,
+    score,
+    total: level.questions.length,
+    percent: Math.round(score / level.questions.length * 100),
+    date: new Date().toLocaleDateString("id-ID"),
+  };
+  currentExam.finished = true;
+  state.examHistory = [attempt, ...state.examHistory].slice(0, 20);
+  saveProgress();
+  renderPage();
 }
 
 function answerQuestion(button) {
@@ -560,6 +748,50 @@ function bindPageEvents() {
     const type = document.querySelector('input[name="quiz-type"]:checked')?.value || "hiragana";
     startQuiz(type);
   });
+  document.querySelectorAll("[data-select-exam]").forEach((button) => button.addEventListener("click", () => {
+    selectedExamLevel = button.dataset.selectExam;
+    renderPage();
+  }));
+  document.getElementById("start-exam")?.addEventListener("click", (event) => startExam(event.currentTarget.dataset.level));
+  document.querySelectorAll("[data-exam-answer]").forEach((button) => button.addEventListener("click", () => {
+    if (!currentExam || currentExam.finished) return;
+    currentExam.answers[currentExam.index] = Number(button.dataset.examAnswer);
+    renderPage();
+  }));
+  document.querySelectorAll("[data-exam-question]").forEach((button) => button.addEventListener("click", () => {
+    if (!currentExam || currentExam.finished) return;
+    currentExam.index = Number(button.dataset.examQuestion);
+    renderPage();
+  }));
+  document.querySelector("[data-exam-speak]")?.addEventListener("click", (event) => speakJapanese(event.currentTarget.dataset.examSpeak));
+  document.getElementById("previous-exam-question")?.addEventListener("click", () => {
+    if (!currentExam || currentExam.index === 0) return;
+    currentExam.index -= 1;
+    renderPage();
+  });
+  document.getElementById("next-exam-question")?.addEventListener("click", () => {
+    if (!currentExam) return;
+    currentExam.index = Math.min(currentExam.index + 1, jlptLevels.find((level) => level.id === currentExam.level).questions.length - 1);
+    renderPage();
+  });
+  document.getElementById("submit-exam")?.addEventListener("click", () => {
+    if (currentExam && currentExam.answers.includes(null) && !window.confirm("Masih ada soal yang belum dijawab. Kumpulkan simulasi sekarang?")) return;
+    finishExam();
+  });
+  document.getElementById("submit-exam-shortcut")?.addEventListener("click", () => {
+    if (currentExam && currentExam.answers.includes(null) && !window.confirm("Masih ada soal yang belum dijawab. Kumpulkan simulasi sekarang?")) return;
+    finishExam();
+  });
+  document.getElementById("exit-exam")?.addEventListener("click", () => {
+    if (!window.confirm("Keluar sekarang? Jawaban simulasi ini tidak akan disimpan.")) return;
+    window.clearInterval(examTimer);
+    currentExam = null;
+    setPage("exams");
+  });
+  document.getElementById("finish-exam")?.addEventListener("click", () => {
+    currentExam = null;
+    setPage("exams");
+  });
   document.querySelectorAll(".answer-option").forEach((button) => button.addEventListener("click", () => answerQuestion(button)));
   document.getElementById("exit-quiz")?.addEventListener("click", () => {
     currentQuiz = null;
@@ -577,6 +809,8 @@ function bindPageEvents() {
   });
   document.getElementById("reset-progress")?.addEventListener("click", () => {
     if (!window.confirm("Yakin mau mengatur ulang semua progres belajar?")) return;
+    window.clearInterval(examTimer);
+    currentExam = null;
     try {
       localStorage.removeItem(storageKey);
       localStorage.removeItem(`${storageKey}-last-study`);
@@ -589,6 +823,7 @@ function bindPageEvents() {
     state.vocabularyKnown = [];
     state.patternsCompleted = [];
     state.best = {};
+    state.examHistory = [];
     state.quizzes = 0;
     state.streak = 0;
     document.getElementById("streak-count").textContent = "0";

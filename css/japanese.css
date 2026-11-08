@@ -323,3 +323,41 @@ h1 em { color: var(--coral); font-weight: 400; }
   .more-menu-item:hover, .more-menu-item.active { color: #b52e3e; background: #f8e9ea; }
   .more-menu-item > span { width: 18px; color: var(--coral); font-family: "Noto Sans JP", sans-serif; text-align: center; }
 }
+
+.jlpt-home-card { width: 100%; display: flex; align-items: center; gap: 13px; margin-top: 15px; padding: 14px 17px; border: 1px solid #eee8d8; border-radius: 10px; background: #fffefa; text-align: left; cursor: pointer; transition: .18s ease; }
+.jlpt-home-card:hover { border-color: #d7b4a8; transform: translateY(-1px); }
+.jlpt-home-symbol { display: grid; width: 38px; height: 38px; flex: 0 0 auto; place-items: center; border-radius: 9px; color: #b52e3e; background: #f8e9ea; font-family: "Noto Sans JP", sans-serif; font-size: 19px; }
+.jlpt-home-card > span:nth-child(2) { display: grid; flex: 1; gap: 3px; }
+.jlpt-home-card strong { font-size: 11px; }.jlpt-home-card small { color: #89867d; font-size: 9px; }.jlpt-home-arrow { color: #b52e3e; font-size: 10px; font-weight: 700; }
+.jlpt-level-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 9px; margin-bottom: 13px; }
+.jlpt-level-card { display: grid; justify-items: start; gap: 8px; padding: 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); text-align: left; cursor: pointer; transition: .18s ease; }
+.jlpt-level-card:hover { border-color: #d7b4a8; }.jlpt-level-card.selected { border-color: #c83d4b; background: #fcf7f3; box-shadow: 0 0 0 1px #c83d4b22; }
+.jlpt-level-card .level-badge, .jlpt-history-list .level-badge { width: 32px; height: 32px; border-radius: 8px; background: #778775; }
+.jlpt-level-card strong { font-size: 10px; }.jlpt-level-card small { color: #99968e; font-size: 9px; }
+.jlpt-exam-detail { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 13px 22px; padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); }
+.jlpt-exam-detail h2 { margin: 5px 0; font-family: "DM Serif Display", Georgia, serif; font-size: 23px; font-weight: 400; }.jlpt-exam-detail p { max-width: 600px; margin: 0; color: #85837b; font-size: 10px; line-height: 1.65; }
+.jlpt-exam-meta { display: flex; align-items: center; gap: 13px; color: #89867d; font-size: 9px; }.jlpt-exam-meta span { display: grid; gap: 3px; }.jlpt-exam-meta strong { color: var(--ink); font-size: 12px; }
+.jlpt-section-list { display: grid; grid-column: 1 / -1; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; }.jlpt-section-list > span { padding: 9px; border-radius: 7px; background: #f7f5ef; font-size: 9px; font-weight: 700; }.jlpt-section-list small { display: block; margin-top: 4px; color: #99968e; font-size: 8px; font-weight: 400; }
+.jlpt-exam-detail .jlpt-disclaimer { grid-column: 1 / -1; max-width: none; padding: 10px 12px; border-radius: 7px; background: #f5f1e7; }.jlpt-exam-detail > .button { width: fit-content; margin: 0; }.jlpt-best-score { align-self: center; color: #85837b; font-size: 9px; }.jlpt-best-score strong { color: #b52e3e; }
+.jlpt-history { margin-top: 22px; }.jlpt-history-list { display: grid; gap: 7px; }.jlpt-history-list > div { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); }.jlpt-history-list strong { color: #b52e3e; font-size: 12px; }.jlpt-history-list small { margin-left: auto; color: #99968e; font-size: 9px; }
+.exam-session-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 6px 0 13px; border-bottom: 1px solid var(--line); }.exam-level-label { color: #99968e; font-size: 9px; font-weight: 700; letter-spacing: 1px; }.exam-timer { min-width: 74px; padding: 7px 10px; border: 1px solid var(--line); border-radius: 7px; color: #3d5142; background: #eef2e9; text-align: center; font-variant-numeric: tabular-nums; font-size: 13px; font-weight: 700; }.exam-timer.urgent { border-color: #e6b6ad; color: #a32e3e; background: #fbefeb; }
+.exam-session-progress { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; margin: 14px 0; color: #85837b; font-size: 9px; }.exam-session-progress .quiz-track { grid-column: 1 / -1; margin: 0; }
+.exam-layout { display: grid; grid-template-columns: minmax(0, 1fr) 205px; align-items: start; gap: 12px; }.exam-question { min-width: 0; padding: 22px; }.exam-section-badge { display: inline-block; padding: 5px 9px; border-radius: 15px; color: #a63843; background: #f8e9ea; font-size: 9px; font-weight: 700; }.exam-passage { margin: 17px 0 12px; padding: 14px; border-left: 3px solid #d5b29f; background: #f8f6f1; font-family: "Noto Sans JP", sans-serif; font-size: 13px; line-height: 1.9; white-space: pre-line; }.exam-prompt { margin: 18px 0 15px; font-family: "Noto Sans JP", "DM Sans", sans-serif; font-size: 16px; line-height: 1.8; }.exam-audio { margin: 0 0 14px; }.exam-answer-options { display: grid; gap: 8px; }.exam-answer-option { display: flex; align-items: center; gap: 10px; min-height: 46px; padding: 9px 11px; border: 1px solid #e9e7e0; border-radius: 8px; background: #fffefa; text-align: left; cursor: pointer; font-family: "Noto Sans JP", "DM Sans", sans-serif; font-size: 12px; line-height: 1.5; }.exam-answer-option:hover { border-color: #d8a99a; background: #fcf6f2; }.exam-answer-option.selected { border-color: #c83d4b; background: #fcf1ef; }.exam-answer-option > span { display: grid; width: 23px; height: 23px; flex: 0 0 auto; place-items: center; border-radius: 50%; color: #77766f; background: #f2f0e9; font-family: "DM Sans", sans-serif; font-size: 9px; font-weight: 700; }.exam-answer-option.selected > span { color: #fff; background: #c83d4b; }
+.exam-question-controls { display: flex; justify-content: space-between; gap: 9px; margin-top: 20px; padding-top: 14px; border-top: 1px solid #f0eee8; }.exam-question-controls .button { min-height: 37px; gap: 8px; font-size: 10px; }.exam-question-controls .button:disabled { opacity: .45; cursor: not-allowed; }
+.exam-question-nav { position: sticky; top: 12px; padding: 15px; }.exam-question-nav > strong { font-size: 10px; }.exam-question-nav > div { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin: 12px 0; }.exam-question-nav > div button { aspect-ratio: 1; border: 1px solid var(--line); border-radius: 6px; color: #77766f; background: #fffefa; cursor: pointer; font-size: 10px; }.exam-question-nav > div button.current { border-color: #c83d4b; color: #a32e3e; box-shadow: 0 0 0 1px #c83d4b22; }.exam-question-nav > div button.answered { color: #426650; background: #eaf2e9; }.exam-question-nav > div button.current.answered { border-color: #c83d4b; }.exam-question-nav > small { display: block; color: #99968e; text-align: center; font-size: 8px; }.exam-submit-link { display: block; margin: 8px auto 0; color: #a63843; font-size: 9px; }
+.exam-result { max-width: 620px; }.exam-result > .eyebrow { display: block; }.exam-section-results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; margin: 17px 0; text-align: left; }.exam-section-results > div { display: flex; justify-content: space-between; gap: 8px; padding: 10px; border-radius: 7px; background: #f7f5ef; font-size: 9px; }.exam-section-results strong { color: #426650; }
+
+@media (max-width: 760px) {
+  .jlpt-level-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .exam-layout { grid-template-columns: minmax(0, 1fr); }
+  .exam-question-nav { position: static; grid-row: 1; }
+  .exam-question-nav > div { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .exam-question-nav .exam-submit-link { display: none; }
+}
+
+@media (max-width: 520px) {
+  .jlpt-home-card { align-items: flex-start; flex-wrap: wrap; }.jlpt-home-arrow { width: 100%; padding-left: 51px; }
+  .jlpt-level-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .jlpt-exam-detail { grid-template-columns: 1fr; padding: 14px; }.jlpt-exam-meta { justify-content: space-between; }.jlpt-section-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .exam-question { padding: 15px; }.exam-question-controls .button { padding: 0 10px; font-size: 9px; }.exam-question-nav { padding: 12px; }
+}

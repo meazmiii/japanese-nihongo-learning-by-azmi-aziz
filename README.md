@@ -2,6 +2,12 @@
 
 Aplikasi belajar bahasa Jepang untuk pemula. Materi disusun bertahap dari Hiragana dan Katakana, dilanjutkan 100 kosakata dasar dan pola kalimat.
 
+## Simulasi JLPT
+
+Menu **Simulasi JLPT** menyediakan mini-simulasi latihan untuk level N5 sampai N1. Setiap level berisi soal 文字・語彙, 文法, 読解, dan 聴解; sesi memakai timer, navigasi soal, audio Jepang dari browser, serta riwayat skor yang disimpan di browser.
+
+Paket ini merupakan latihan ringkas, bukan ujian penuh, materi resmi, atau prediksi skor JLPT. Penilaian JLPT resmi menggunakan skala dan kriteria tersendiri.
+
 ## Jalankan secara lokal
 
 Dari folder proyek:
